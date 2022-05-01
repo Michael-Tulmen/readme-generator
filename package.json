@@ -1,0 +1,23 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "A node based application that allows a user to fill in an entire readme using command prompts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michael-Tulmen/readme-generator.git"
+  },
+  "author": "Michael-Tulmen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michael-Tulmen/readme-generator/issues"
+  },
+  "homepage": "https://github.com/Michael-Tulmen/readme-generator#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.2.4"
+  }
+}
