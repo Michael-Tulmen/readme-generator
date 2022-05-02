@@ -43,4 +43,8 @@ If you have any questions, you may direct them to undefined using the following 
 | Email | <michaeltulmen@me.com> |
 
 ## Licensure
+<<<<<<< HEAD
 MIT  
+=======
+MIT  
+>>>>>>> 8a4eb021980d875b51048e28cd31719e503a7cc7

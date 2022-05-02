@@ -872,53 +872,53 @@ SOFTWARE.
             `
         }
     }
-      return `
-        # ${title}
+return `
+# ${title}
         
-        ## Description
-        ${description}
-        ##GitHub
-        You can visit this application at ${github} to try yourself
+## Description
+${description}
+##GitHub
+You can visit this application at ${github} to try yourself
             
-        ## Table of Contents
-        - [${title}](#${title})
-        - [Description](#description)
-        - ${languages}
-        - [GitHub-Info](#github)
-        - [Table of Contents](#table-of-contents)
-        - [Installation](#installation)
-        - [Usage](#usage)
-        - [Contributors](#contributing)
-        - [Testing](#Testing)
-        - [Questions](#Questions)
+## Table of Contents
+- [${title}](#${title})
+- [Description](#description)
+- ${languages}
+- [GitHub-Info](#github)
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributors](#contributing)
+- [Testing](#Testing)
+- [Questions](#Questions)
         
         
-        ## Installation
-        ${installation}
+## Installation
+${installation}
         
         
-        ## Usage
-        ${usageInfo}
+## Usage
+${usageInfo}
         
         
-        ## Contributors
-        ${contributors}
+## Contributors
+${contributors}
 
-        ## Testing
-        ${test}
+## Testing
+${test}
         
-        ## Questions
-        If you have any questions, you may direct them to ${user.github} using the following links:
-        | Contact | Description |
-        | --- | --- |
-        | Name | ${user.name} |
-        | Title | ${user.occupation} |
-        | Email | <${user.email}> |
+## Questions
+If you have any questions, you may direct them to ${user.github} using the following links:
+| Contact | Description |
+| --- | --- |
+| Name | ${user.name} |
+| Title | ${user.occupation} |
+| Email | <${user.email}> |
 
-        ## Licensure
-        ${licensure}  
+## Licensure
+${licensure}  
 
-        `;
+`;
     }
     
-    module.exports = generatorMD;
+module.exports = generatorMD;
