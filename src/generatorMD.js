@@ -881,7 +881,7 @@ ${description}
 You can visit this application at ${github} to try yourself
             
 ## Table of Contents
-- [${title}](#${title})
+- ${title}
 - [Description](#description)
 - ${languages}
 - [GitHub-Info](#github)
