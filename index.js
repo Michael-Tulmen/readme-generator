@@ -1,15 +1,14 @@
-const fs = require('fs');
 const inquirer = require('inquirer');
-const generatorMD = require('./src/generatorMD') //if(generatorMD) ok else undefined
+const generatorMD = require('./src/generatorMD');
+const fs = require('fs');
 
-//retrieve user information
-const promptUserData = () => {
-    console.log(`
-    =========
-    USER DATA
-    =========
-    `)
-    return inquirer.prompt([
+
+
+//list of prompts to fill out major portions of the sheet from user
+const getUserInfo = () => {
+
+    return inquirer
+        .prompt([
     {
         type: 'input',
         name: 'name',
@@ -62,19 +61,14 @@ const promptUserData = () => {
             }
         }
     }
-    ]);
-}
+  ]);
+};
 
 
-//retrieve project information
-const promptProjectDetails = data => {
-    console.log(`
-    
-    ===============
-    PROJECT DETAILS
-    ===============
-    `)
-    return inquirer.prompt([
+
+const getProjectInfo = userInformation => {
+    return inquirer
+        .prompt([
     {
         type: 'input',
         name: 'title',
@@ -158,21 +152,40 @@ const promptProjectDetails = data => {
                 return false;
             }
         }
-    },  
-])
-    .then((transferableData) => {
-        const bigData = Object.assign(data, transferableData);
-        console.log(bigData);
-        return bigData;
-    });
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'testInstructions',
+        validate: testInstructions => {
+            if(testInstructions) {
+                return true;
+            } else {
+                console.log('It is important to inform the user as to how to test this program for future usage!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'list',
+        name: 'licensure',
+        message: 'Please select the license you have or wish to use for this software',
+        choices : ['APACHE 2.O', 'BSD 3', 'GVL-GPL 3.0', 'MIT','None']
+    }  
+  ])
+  .then((markdownObject) => {
+      const actual = Object.assign(userInformation, markdownObject);
+      console.log(actual);
+      return actual;
+  });
 };
 
-promptUserData()
-    .then(promptProjectDetails)
-    .then(data => {
-        const sendUserData = generatorMD(data);
+getUserInfo()
+    .then(getProjectInfo)
+    .then(userInformation => {
+        const sendUserData = generatorMD(userInformation);
 
         fs.writeFile('./dist/README.md', sendUserData, (err) => {
             if (err) throw new Error(err);
         });
-    }); 
+    });
