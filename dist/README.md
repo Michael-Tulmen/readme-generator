@@ -1,15 +1,15 @@
 
-        # asdas
+        # README Generator
         
         ## Description
-        asd
+        This is a application made with node, to allow a user to generate a fully functional readme, through the command prompt alone
         ##GitHub
-        You can visit this application at d to try yourself
+        You can visit this application at https://github.com/Michael-Tulmen/readme-generator to try yourself
             
         ## Table of Contents
-        - [asdas](#asdas)
+        - [README Generator](#README Generator)
         - [Description](#description)
-        - JavaScript,NodeJS,ExpressJS,HTML,CSS,SQL,Python,Ruby,Java,C++,C#,FORTRAN
+        - JavaScript,NodeJS
         - [GitHub-Info](#github)
         - [Table of Contents](#table-of-contents)
         - [Installation](#installation)
@@ -20,28 +20,28 @@
         
         
         ## Installation
-        sd
+        The user provided node is already installed, can take this from my github and use it on their local machine with no qualms
         
         
         ## Usage
-        asdsd
+        Users can employ this as they will for any type of project so long as the proper licensure is met
         
         
         ## Contributors
-        sd
+        No contributors other than myself, contribution guidelines are as simple as adding me on github and letting me know
 
         ## Testing
-        asdas
+        to test, do so at your own will!
         
         ## Questions
         If you have any questions, you may direct them to undefined using the following links:
         | Contact | Description |
         | --- | --- |
-        | Name | asd |
+        | Name | Michael-Tulme |
         | Title | undefined |
-        | Email | <asd> |
+        | Email | <michaeltulmen@me.com> |
 
         ## Licensure
-        APACHE 2.O  
+        MIT  
 
         
