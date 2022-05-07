@@ -66,7 +66,7 @@ const getUserInfo = () => {
 
 
 
-const getProjectInfo = userInformation => {
+const getProjectInfo = data => {
     return inquirer
         .prompt([
     {
@@ -173,18 +173,15 @@ const getProjectInfo = userInformation => {
         choices : ['APACHE 2.O', 'BSD 3', 'GVL-GPL 3.0', 'MIT','None']
     }  
   ])
-  .then((markdownObject) => {
-      const actual = Object.assign(userInformation, markdownObject);
-      console.log(actual);
-      return actual;
-  });
+  .then((transferableData) => {
+    const bigData = Object.assign(data, transferableData);
+    console.log(bigData);
+    return bigData;
+});
 };
 
-getUserInfo()
-    .then(getProjectInfo)
-    .then(userInformation => {
-        const sendUserData = generatorMD(userInformation);
-
+getUserInfo().then(getProjectInfo).then(data => {
+        const sendUserData = generatorMD(data);
         fs.writeFile('./dist/README.md', sendUserData, (err) => {
             if (err) throw new Error(err);
         });
