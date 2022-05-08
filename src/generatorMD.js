@@ -1,4 +1,4 @@
-// function generate md-data
+//license generator
     function renderLicenseBadge(license) {
         const licenses = [
           {
@@ -83,10 +83,12 @@
       };
       
 function generatorMD(data) {
-const {title, description, github, installation, usageInfo, contributors, languages, licensure, test, ...user} = data;
+const {title, description, github, installation, usageInfo, contributors, languages, license, test, userTitle, ...user} = data;
     
 return `
 # ${title}
+
+${renderLicenseBadge(data.license, data)}
         
 ## Description
 ${description}
@@ -122,14 +124,14 @@ ${contributors}
 ${test}
 
 ## Licensure
-${licensure}
+This project is licensed under the following terms and conditions: **${license}**.
         
 ## Questions
 If you have any questions, you may direct them to ${user.github} using the following links:
 | Contact | Description |
 | --- | --- |
 | Name | ${user.name} |
-| Title | ${user.occupation} |
+| GitHub | ${user.portfolio} |
 | Email | <${user.email}> |
 
 `;

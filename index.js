@@ -168,9 +168,9 @@ const getProjectInfo = data => {
     },
     {
         type: 'list',
-        name: 'licensure',
+        name: 'license',
         message: 'Please select the license you have or wish to use for this software',
-        choices : ['APACHE 2.O', 'BSD 3', 'GVL-GPL 3.0', 'MIT','None']
+        choices : ['Apache-2.0', 'BSD-2-Clause', 'BSD-3-Clause', 'CDDL-1.0','EPL-2.0', 'GPL-2.0', 'LGPL-3.0', 'MIT', 'MPL-2.0', 'None']
     }  
   ])
   .then((transferableData) => {
